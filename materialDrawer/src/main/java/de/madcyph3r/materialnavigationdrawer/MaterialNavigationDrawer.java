@@ -208,6 +208,15 @@ public abstract class MaterialNavigationDrawer<Fragment> extends ActionBarActivi
         initHeaderAndMenu(savedInstanceState);
     }
 
+    public void recreateMenu() {
+        headItemManager.clear();
+        headItemSwitchExtraMenu = new MaterialMenu();
+        currentSection = null;
+        currentMenu = null;
+        init(null);
+        initHeaderAndMenu(null);
+    }
+
     // init methods
     private void initThemeVars(Resources.Theme theme) {
         // init theme params
